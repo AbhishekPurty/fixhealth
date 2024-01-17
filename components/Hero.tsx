@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { RiHeartPulseLine } from "react-icons/ri";
 
 const Hero = () => {
