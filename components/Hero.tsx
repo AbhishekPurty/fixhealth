@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <div className="h-[100vh] xl:pb-20 overflow-hidden">
       <div className="container mx-auto h-full">
-        <div className="flex flex-col xl:flex-row items-center justify-between h-full ">
+        <div className="flex flex-col xl:flex-row items-center justify-between h-full bg-[url('/fixhealthbg.jpg')] py-[4rem] bg-center bg-no-repeat bg-cover">
           <div className="mx-10 xl:w-[48%] text-center xl:text-left">
             <div className="flex items-center tracking-widest bg-white text-black py-[10px] px-[20px] w-max gap-x-2 mb-[26px] rounded-full mx-auto xl:mx-0">
               <RiHeartPulseLine />
