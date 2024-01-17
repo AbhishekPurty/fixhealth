@@ -1,7 +1,7 @@
 import { Input } from 'antd'
 import React from 'react'
 
-const Form = () => {
+const Form:React.FC = () => {
   return (
     <div className="flex flex-col items-center justify-center">
         <div className="flex flex-col items-center justify-center h-[5rem] w-[40%]">
