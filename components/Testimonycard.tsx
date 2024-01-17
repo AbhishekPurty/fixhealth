@@ -19,7 +19,7 @@ const Testimonycard = ({quote, name, profession, issue, p_image }: Props) => {
                     <p className="text-[22px] text-center lg:text-left mb-7 gap-x-2 items-center tracking-widest py-[10px] px-[20px]">
                         <span className="flex flex-row mx-2">{quote}</span>
                     </p>
-                    <div className="px-[20px] text-[26px] items-center font-bold">{name}</div>
+                    <div className="px-[20px] text-[26px] items-center font-bold text-cyan-400">{name}</div>
                     <div className="px-[20px] font-medium uppercase tracking-[2.24px]">{profession}</div>
                     <div className="px-[20px]">{issue}</div>
                 </div>

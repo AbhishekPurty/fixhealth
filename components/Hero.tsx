@@ -3,9 +3,9 @@ import { RiHeartPulseLine } from "react-icons/ri";
 
 const Hero = () => {
   return (
-    <div className="py-12 xl:pt-15 xl:pb-20 overflow-hidden">
+    <div className="h-[100vh] xl:pb-20 overflow-hidden">
       <div className="container mx-auto h-full">
-        <div className="flex flex-col xl:flex-row items-center justify-between h-full">
+        <div className="flex flex-col xl:flex-row items-center justify-between h-full bg-[url('/fixhealthbg.jpg')] py-[4rem] bg-center bg-no-repeat bg-cover">
           <div className="mx-10 xl:w-[48%] text-center xl:text-left">
             <div className="flex items-center tracking-widest bg-white text-black py-[10px] px-[20px] w-max gap-x-2 mb-[26px] rounded-full mx-auto xl:mx-0">
               <RiHeartPulseLine />
@@ -17,11 +17,10 @@ const Hero = () => {
             </p>
             <button className="text-white border-2 border-cyan-400 bg-cyan-400 duration-300 lg:w-auto lg:mx-0 rounded-full gap-3 px-4 py-2">Contact Us</button>
           </div>
-          <div className="hidden xl:flex max-w-[814px] self-end">
-            <Image src="/hero_img.png" alt="heroimage" width={600} height={400}/>
-          </div>
+          {/* <div className="hidden xl:flex max-w-[814px] self-end">
+            <Image src="/fixhealthbg.jpg" alt="heroimage" width={600} height={400}/>
+          </div> */}
         </div>
-        
       </div>
     </div>
   )
