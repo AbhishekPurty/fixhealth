@@ -1,8 +1,9 @@
 import { RiHeartPulseLine } from "react-icons/ri";
+import Form_v2 from "./Form_v2";
 
 const Hero = () => {
   return (
-    <div className="h-[100vh] xl:pb-20 overflow-hidden">
+    <div className="h-[100vh] xl:pb-20 ">
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between h-full bg-[url('/fixhealthbg.jpg')] py-[4rem] bg-center bg-no-repeat bg-cover">
           <div className="mx-10 xl:w-[48%] text-center xl:text-left">
@@ -15,6 +16,9 @@ const Hero = () => {
               At Fix Health, we believe in empowering you to live your best, pain-free life. Our dedicated team of experienced physiotherapists is committed to providing personalized and compassionate care to help you achieve optimal physical health.
             </p>
             <button className="text-white border-2 border-cyan-400 bg-cyan-400 duration-300 lg:w-auto lg:mx-0 rounded-full gap-3 px-4 py-2">Contact Us</button>
+          </div>
+          <div>
+            <Form_v2/>
           </div>
           {/* <div className="hidden xl:flex max-w-[814px] self-end">
             <Image src="/fixhealthbg.jpg" alt="heroimage" width={600} height={400}/>

@@ -50,23 +50,25 @@ const Form_v2 = () => {
     }
 
   return (
-    <div className="relative bg-gray-700 rounded-md p-6 m-[4rem] border-[1px] border-white">
-      <form onSubmit={onSubmit}>
-            <div className="absolute top-[.5rem] right-[.5rem]">
-                {currentStepIndex + 1} / {steps.length}
-            </div>
-            {step}
-            <div className="mt-[1rem] flex gap-[.5rem] justify-end">
-                {!isFirstStep && (
-                    <button type="button" onClick={back} className="h-11 px-6 bg-black rounded-md">
-                        Back
+    <div className="size-max">
+        <div className="relative bg-gray-700 rounded-md p-6 m-[4rem] border-[1px] border-white ">
+        <form onSubmit={onSubmit}>
+                <div className="absolute top-[.5rem] right-[.5rem]">
+                    {currentStepIndex + 1} / {steps.length}
+                </div>
+                {step}
+                <div className="mt-[1rem] flex gap-[.5rem] justify-end">
+                    {!isFirstStep && (
+                        <button type="button" onClick={back} className="h-11 px-6 bg-black rounded-md">
+                            Back
+                        </button>
+                    )}
+                    <button type="submit" className="h-11 px-6 bg-black rounded-md">
+                        {isLastStep ? "Finish" : "Next" }
                     </button>
-                )}
-                <button type="submit" className="h-11 px-6 bg-black rounded-md">
-                    {isLastStep ? "Finish" : "Next" }
-                </button>
-            </div>
-      </form>
+                </div>
+        </form>
+        </div>
     </div>
   )
 }

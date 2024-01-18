@@ -14,16 +14,31 @@ const Prev_exp = ({ prev_exp, updateFields}: Props) => {
     <div>
       <FormWrapper title="Book an appointment">
       <label htmlFor="prev_exp">Previous Experience with Physiotherapy</label>
+      <div className="flex flex-row gap-4">
+      <label htmlFor="prev_exp">YES</label>
             <input
                 autoFocus
                 required
-                id="prev_exp"
-                type="text"
-                placeholder="Previous Experience with Physiotherapy"
-                className="h-11 px-4 border rounded-md bg-cyan-800"
+                id="prev_exp1"
+                name="prev_exp"
+                type="radio"
+                placeholder=""
+                className=""
                 value={prev_exp}
                 onChange = {e => updateFields({prev_exp: e.target.value})}
             />
+            <label htmlFor="prev_exp">NO</label>
+            <input
+                required
+                id="prev_exp0"
+                name="prev_exp"
+                type="radio"
+                placeholder=""
+                className=""
+                value={prev_exp}
+                onChange = {e => updateFields({prev_exp: e.target.value})}
+            />
+            </div>
         </FormWrapper>
     </div>
   )
