@@ -9,7 +9,7 @@ interface  Props{
 }
 const Testimonycard = ({quote, name, profession, issue, p_image }: Props) => {
   return (
-    <div className="container justify-center px-10 py-12 mx-auto gap-10 flex flex-col items-center">
+    <div className="container justify-center px-10 py-12 mx-auto gap-10 flex flex-col items-center text-white">
         <div className="drop-shadow-lg">
             <Image src={p_image} alt="p1" width={250} height={250} />
         </div>
