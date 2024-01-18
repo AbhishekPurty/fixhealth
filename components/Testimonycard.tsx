@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 
-interface  Props{
+interface Props{
     quote : String;
     name: String;
     profession : String;
