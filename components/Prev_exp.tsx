@@ -3,13 +3,16 @@ import FormWrapper from './FormWrapper'
 
 type PrevData = {
   prev_exp: string
+  age: string
 }
+
 
 type Props = PrevData &{
     updateFields: (fields: Partial<PrevData>)  => void
 }
 
-const Prev_exp = ({ prev_exp, updateFields}: Props) => {
+const Prev_exp = ({ prev_exp, age, updateFields}: Props) => {
+  console.log(age)
   return (
     <div>
       <FormWrapper title="Book an appointment">
@@ -19,6 +22,7 @@ const Prev_exp = ({ prev_exp, updateFields}: Props) => {
             <input
                 autoFocus
                 required
+                defaultChecked
                 id="prev_exp1"
                 name="prev_exp"
                 type="radio"

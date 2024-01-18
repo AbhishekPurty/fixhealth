@@ -34,6 +34,8 @@ const config: Config = {
       },
       colors: {
         bgGrey : "#22252a",
+        formBg: "#242424",
+        formInput: "#2e2c2d"
       }
       
     },

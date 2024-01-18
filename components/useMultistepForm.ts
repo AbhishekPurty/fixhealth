@@ -3,8 +3,18 @@ import { ReactElement, useState } from "react"
 export function useMultistepForm(steps: ReactElement[]) {
   const [currentStepIndex, setCurrentStepIndex] = useState(0)
 
-  function next() {
+  const [end, setEnd ] = useState(1)
+  
+  function next(currentStep:number, age:string) {
+    let temp:number
+    temp = age as unknown as number
     setCurrentStepIndex(i => {
+        if (temp<40 && currentStep===steps.length-3){
+            setEnd(2)
+        }
+        else if(temp>=40 && currentStep===steps.length-3){
+            setEnd(1)
+        }
       if (i >= steps.length - 1) return i
       return i + 1
     })
@@ -26,7 +36,7 @@ export function useMultistepForm(steps: ReactElement[]) {
     step: steps[currentStepIndex],
     steps,
     isFirstStep: currentStepIndex === 0,
-    isLastStep: currentStepIndex === steps.length - 1,
+    isLastStep: currentStepIndex === steps.length - end,
     goTo,
     next,
     back,

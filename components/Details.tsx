@@ -22,7 +22,7 @@ const Details = ({age, city, company, updateFields}: Props) => {
                 id="age"
                 type="number"
                 placeholder="Age"
-                className="h-11 px-4 border rounded-md bg-cyan-800"
+                className="h-11 px-4 border rounded-md bg-formInput"
                 value={age}
                 onChange = {e => updateFields({age: e.target.value})}
             />
@@ -32,7 +32,7 @@ const Details = ({age, city, company, updateFields}: Props) => {
                 id="city"
                 type="text"
                 placeholder="City"
-                className="h-11 px-4 border rounded-md bg-cyan-800"
+                className="h-11 px-4 border rounded-md bg-formInput"
                 value={city}
                 onChange = {e => updateFields({city: e.target.value})}
             />
@@ -42,7 +42,7 @@ const Details = ({age, city, company, updateFields}: Props) => {
                 id="company"
                 type="text"
                 placeholder="Company"
-                className="h-11 px-4 border rounded-md bg-cyan-800"
+                className="h-11 px-4 border rounded-md bg-formInput"
                 value={company}
                 onChange = {e => updateFields({company: e.target.value})}
             />

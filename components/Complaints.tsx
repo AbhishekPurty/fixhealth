@@ -19,7 +19,7 @@ const Complaints = ({complaints, updateFields}: Props) => {
                 id="complaints"
                 type="text"
                 placeholder="Complaint"
-                className="h-11 px-4 border rounded-md bg-cyan-800"
+                className="h-11 px-4 border rounded-md bg-formInput"
                 value={complaints}
                 onChange = {e => updateFields({complaints: e.target.value})}
             />

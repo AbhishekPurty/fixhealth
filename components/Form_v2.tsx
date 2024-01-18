@@ -42,20 +42,21 @@ const Form_v2 = () => {
     <Complaints {...data} updateFields={updateFields}/>,
     <Prev_exp {...data} updateFields={updateFields}/>
 ])
-
     function onSubmit(e: FormEvent){
         e.preventDefault()
-        if(!isLastStep) return next()
+        console.log(currentStepIndex)
+        console.log(data.age)
+        if(!isLastStep) return next(currentStepIndex, data.age)
         alert("Booking Successful")
     }
 
   return (
     <div className="size-max">
-        <div className="relative bg-gray-700 rounded-md p-6 m-[4rem] border-[1px] border-white ">
+        <div className="relative bg-formBg rounded-md p-6 m-[4rem] border-[1px] border-white ">
         <form onSubmit={onSubmit}>
-                <div className="absolute top-[.5rem] right-[.5rem]">
-                    {currentStepIndex + 1} / {steps.length}
-                </div>
+                {/* <div className="absolute top-[.5rem] right-[.5rem]">
+                    Step {currentStepIndex + 1}
+                </div> */}
                 {step}
                 <div className="mt-[1rem] flex gap-[.5rem] justify-end">
                     {!isFirstStep && (

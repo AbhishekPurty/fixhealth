@@ -21,7 +21,7 @@ const Name = ({name, phoneno, updateFields }: Props) => {
                 id="name"
                 type="text"
                 placeholder="Name"
-                className="h-11 px-4 border rounded-md bg-cyan-800"
+                className="h-11 px-4 border rounded-md bg-formInput"
                 value={name}
                 onChange = {e => updateFields({name: e.target.value})}
             />
@@ -29,9 +29,9 @@ const Name = ({name, phoneno, updateFields }: Props) => {
             <input
                 required
                 id="phoneno"
-                type="number"
+                type="tel"
                 placeholder="Phone No."
-                className="h-11 px-4 border rounded-md bg-cyan-800"
+                className="h-11 px-4 border rounded-md bg-formInput"
                 value={phoneno}
                 onChange = {e => updateFields({phoneno: e.target.value})}
             />
