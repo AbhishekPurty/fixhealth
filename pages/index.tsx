@@ -1,4 +1,5 @@
 // import Form from "@/components/Form";
+import Form_v2 from "@/components/Form_v2";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Stats from "@/components/Stats";
@@ -14,6 +15,7 @@ export default function Home() {
       <Stats />
       {/* <Testimonials /> */}
       {/* <Form /> */}
+      <Form_v2 />
       <Testmonial_v2/>
     </div>
     </>

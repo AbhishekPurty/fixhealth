@@ -1,46 +1,43 @@
-// "use client";
+import FormWrapper from "./FormWrapper"
 
-// import React from 'react'
-// import { useForm } from 'react-hook-form';
+type UserData = {
+  name: string
+  phoneno: string
+}
 
-// interface Props{
-//     name: String;
-//     phoneno: String;
-// }
+type Props = UserData &{
+    updateFields: (fields: Partial<UserData>)  => void
+}
 
-// const Name = () => {
+const Name = ({name, phoneno, updateFields }: Props) => {
 
-//     const {register, handleSubmit } =  useForm <Props>();
+  return (
+    <div>
+      <FormWrapper title="Book an appointment">
+      <label htmlFor="name">Name</label>
+            <input
+                autoFocus
+                required
+                id="name"
+                type="text"
+                placeholder="Name"
+                className="h-11 px-4 border rounded-md bg-cyan-800"
+                value={name}
+                onChange = {e => updateFields({name: e.target.value})}
+            />
+        <label htmlFor="phoneno">Phone No.</label>
+            <input
+                required
+                id="phoneno"
+                type="number"
+                placeholder="Phone No."
+                className="h-11 px-4 border rounded-md bg-cyan-800"
+                value={phoneno}
+                onChange = {e => updateFields({phoneno: e.target.value})}
+            />
+          </FormWrapper>
+    </div>
+  )
+}
 
-//     function onHandleFormSubmit(data:Props) {
-//         console.log({data});
-//     }
-
-//   return (
-//     <form className="space-y-6" onSubmit={handleSubmit(onHandleFormSubmit)}>
-//         <div className="flex flex-col gap-1">
-//             <label htmlFor="name">Name</label>
-//             <input
-//                 id="name"
-//                 type="text"
-//                 placeholder="Name"
-//                 className="h-11 px-4 border rounded-md"
-//                 {...register("name")}
-//             />
-//             <label htmlFor="phoneno">Phone No.</label>
-//             <input
-//                 id="phoneno."
-//                 type="text"
-//                 placeholder="Phone No."
-//                 className="h-11 px-4 border rounded-md"
-//                 {...register("phoneno")}
-//             />
-//         </div>
-//         <div className="flex justify-end">
-//             <button className="h-11 px-6 bg-black rounded-md">Next</button>
-//         </div>
-//     </form>
-//   )
-// }
-
-// export default Name
+export default Name
