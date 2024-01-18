@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import { FormEvent, useState } from 'react'
 import { useMultistepForm } from './useMultistepForm'
 import Name from './Name'
