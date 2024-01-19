@@ -6,5 +6,6 @@ html {
     @apply text-white
 }
 body {
-    background-color: rgb(34, 37, 42);
+    /* background-color: rgb(34, 37, 42); */
+    background-color: #041C32;
 }

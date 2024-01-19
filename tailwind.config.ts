@@ -33,9 +33,10 @@ const config: Config = {
         navbarShadow: "0 10px 30px -10px rgba(2,12,27,0.7)",
       },
       colors: {
+        bgDarkblue : "#041C32",
         bgGrey : "#22252a",
-        formBg: "#242424",
-        formInput: "#2e2c2d"
+        formBg: "#041C32",
+        formInput: "#064663"
       }
       
     },

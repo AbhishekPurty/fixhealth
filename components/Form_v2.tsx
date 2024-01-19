@@ -51,8 +51,8 @@ const Form_v2 = () => {
     }
 
   return (
-    <div className="size-max">
-        <div className="relative bg-formBg rounded-md p-6 m-[4rem] border-[1px] border-white ">
+    <div className="">
+        <div className="relative bg-formBg rounded-md p-6 m-[1rem] border-[1px] border-white ">
         <form onSubmit={onSubmit}>
                 {/* <div className="absolute top-[.5rem] right-[.5rem]">
                     Step {currentStepIndex + 1}
@@ -60,11 +60,11 @@ const Form_v2 = () => {
                 {step}
                 <div className="mt-[1rem] flex gap-[.5rem] justify-end">
                     {!isFirstStep && (
-                        <button type="button" onClick={back} className="h-11 px-6 bg-black rounded-md">
+                        <button type="button" onClick={back} className="h-11 px-6 bg-cyan-400 text-black rounded-md">
                             Back
                         </button>
                     )}
-                    <button type="submit" className="h-11 px-6 bg-black rounded-md">
+                    <button type="submit" className="h-11 px-6 bg-cyan-400 text-black rounded-md">
                         {isLastStep ? "Finish" : "Next" }
                     </button>
                 </div>

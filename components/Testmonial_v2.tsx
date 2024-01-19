@@ -18,26 +18,42 @@ import 'swiper/css/scrollbar';
 
 const Testmonial_v2 = () => {
   return (
-    <div className="">
-        <div className="flex items-center justify-center text-5xl text-cyan-400 font-semibold">
-            Testimonials
-        </div>
-      <Swiper
-      // install Swiper modules
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={50}
-      slidesPerView={1}
-      navigation
-      pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
-    >
-      <SwiperSlide><Testimonycard quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut tortor non massa lacinia iaculis. Aliquam feugiat lacus tellus, ac tempus lorem sagittis ut. Sed ut orci accumsan, sollicitudin lacus sed, pretium mi." name="Abhishek" profession="Student" issue="Chest Pain" p_image={img1}/></SwiperSlide>
-      <SwiperSlide><Testimonycard quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut tortor non massa lacinia iaculis. Aliquam feugiat lacus tellus, ac tempus lorem sagittis ut. Sed ut orci accumsan, sollicitudin lacus sed, pretium mi." name="Anirban" profession="Student" issue=" Pain" p_image={img2}/></SwiperSlide>
-      <SwiperSlide><Testimonycard quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut tortor non massa lacinia iaculis. Aliquam feugiat lacus tellus, ac tempus lorem sagittis ut. Sed ut orci accumsan, sollicitudin lacus sed, pretium mi." name="Amman" profession="Student" issue="Leg Pain" p_image={img3}/></SwiperSlide>
-      <SwiperSlide><Testimonycard quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut tortor non massa lacinia iaculis. Aliquam feugiat lacus tellus, ac tempus lorem sagittis ut. Sed ut orci accumsan, sollicitudin lacus sed, pretium mi." name="Justin" profession="Student" issue="Back Pain" p_image={img4}/></SwiperSlide>
-    </Swiper>
+    <div className="py-10">
+      <div className="flex flex-col px-5 mx-10 items-center justify-center text-5xl text-cyan-400 font-semibold">
+          What our patients say
+      </div>
+      <div className="flex flex-row items-center justify-center">
+        <Swiper
+          // install Swiper modules
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={0}
+          slidesPerView='auto'
+          navigation
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log('slide change')}
+          breakpoints = {{
+            480: {
+              slidesPerView: 2,
+              spaceBetween: 0
+            },
+            780: {
+              slidesPerView: 2,
+              spaceBetween: 0
+            },
+            1330: {
+              slidesPerView: 3,
+              spaceBetween: 0
+            }
+          }}
+        >
+          <SwiperSlide><Testimonycard quote="Fix Health worked wonders for me! In just a few sessions, their physiotherapy team eased my pain and improved my mobility. I can now live life without discomfort." name="Anirban" profession="SDE" issue="Ankle injury" p_image={img1}/></SwiperSlide>
+          <SwiperSlide><Testimonycard quote="I had amazing results with Fix Health! Their physiotherapy team restored my mobility and reduced my pain in a matter of few sessions. I'm comfortable living my life now." name="Prerna" profession="UI/UX Designer" issue="Neck pain" p_image={img2}/></SwiperSlide>
+          <SwiperSlide><Testimonycard quote="My experience with Fix Health was fantastic! My mobility was enhanced and my discomfort was reduced in a matter of short sessions by their physiotherapy staff." name="Amman" profession="Aerospace Engineer" issue="Shoulder Pain" p_image={img3}/></SwiperSlide>
+          <SwiperSlide><Testimonycard quote="Choosing Fix Health for physiotherapy was a game-changer. Their expertise and genuine concern for my well-being were evident in every session." name="Justin" profession="Pilot" issue="Back Pain" p_image={img4}/></SwiperSlide>
+        </Swiper>
+      </div>
     </div>
   )
 }

@@ -12,13 +12,13 @@ const Complaints = ({complaints, updateFields}: Props) => {
   return (
     <div>
       <FormWrapper title="Book an appointment">
-      <label htmlFor="complaints">Complaint</label>
+      <label htmlFor="complaints">Primary Concern</label>
             <input
                 autoFocus
                 required
                 id="complaints"
                 type="text"
-                placeholder="Complaint"
+                placeholder="Primary Concern"
                 className="h-11 px-4 border rounded-md bg-formInput"
                 value={complaints}
                 onChange = {e => updateFields({complaints: e.target.value})}
