@@ -8,7 +8,7 @@ const Hero = () => {
   const [showPopup, setShowPopup ] = useState(false)
 
   return (
-    <div id="home" className="h-[110vh] xl:pb-20 md:pb-20 ">
+    <div id="home" className="h-[110vh] mb-20 xl:mb-0 xl:pb-20 md:pb-20 ">
       <div className="container mx-auto h-full">
         {/* In next line use "bg-[url('/fixhealthbg.jpg')] py-[4rem] bg-center bg-no-repeat bg-cover" for whole screen bg */}
         <div className="py-10 xl:py-0 xl:px-10 flex flex-col xl:flex-row items-center justify-between h-full">
@@ -30,8 +30,8 @@ const Hero = () => {
             </button>
             {showPopup && <Popup onClose={() => setShowPopup(false)}/>}
           </div>
-          <div className="max-w-[814px] py-10">
-            <Image src="/hero_img4.png" alt="heroimage" width={600} height={300}/>
+          <div className="max-w-[813px] py-10 px-4">
+            <Image src="/hero_img4.png" alt="heroimage" width={600} height={300} objectFit="contain"/>
           </div>
         </div>
       </div>
