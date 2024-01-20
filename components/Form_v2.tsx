@@ -6,6 +6,8 @@ import Details from './Details'
 import Complaints from './Complaints'
 import Prev_exp from './Prev_exp'
 
+import { useRouter } from 'next/router'
+
 type FormData ={
     name: string
     phoneno: string
@@ -29,6 +31,8 @@ const INITIAL_DATA: FormData = {
 
 const Form_v2 = () => {
 
+    const router = useRouter()
+
     const [data, setData] = useState(INITIAL_DATA)
     function updateFields(fields: Partial<FormData>){
         setData(prev => {
@@ -44,10 +48,11 @@ const Form_v2 = () => {
 ])
     function onSubmit(e: FormEvent){
         e.preventDefault()
-        console.log(currentStepIndex)
-        console.log(data.age)
+        // console.log(currentStepIndex)
+        // console.log(data.age)
         if(!isLastStep) return next(currentStepIndex, data.age)
-        alert("Booking Successful")
+        router.push(`/doctors/${data.city}`)
+        // alert("Booking Successful")
     }
 
   return (

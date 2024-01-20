@@ -1,6 +1,5 @@
 // import Form from "@/components/Form";
 // import Form_v2 from "@/components/Form_v2";
-import Doctor from "@/components/Doctor";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Stats from "@/components/Stats";
@@ -24,7 +23,6 @@ export default function Home() {
       <Doctor name="Anirban" expertise="Snr. Web Dev" city="Delhi" />
       <Doctor name="Anirban" expertise="Snr. Web Dev" city="Delhi" />
       <Doctor name="Anirban" expertise="Snr. Web Dev" city="Delhi" /> */}
-      <Doctor/>
     </div>
     </>
   )

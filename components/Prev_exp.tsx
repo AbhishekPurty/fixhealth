@@ -18,7 +18,7 @@ const Prev_exp = ({ prev_exp, age, updateFields}: Props) => {
       <FormWrapper title="Book an appointment">
       <label htmlFor="prev_exp">Previous Experience with Physiotherapy</label>
       <div className="flex flex-row gap-4">
-      <label htmlFor="prev_exp">YES</label>
+        <div className="flex gap-2">
             <input
                 autoFocus
                 required
@@ -31,7 +31,9 @@ const Prev_exp = ({ prev_exp, age, updateFields}: Props) => {
                 value={prev_exp}
                 onChange = {e => updateFields({prev_exp: e.target.value})}
             />
-            <label htmlFor="prev_exp">NO</label>
+            <label htmlFor="prev_exp">YES</label>
+        </div>
+        <div className="flex gap-2">
             <input
                 required
                 id="prev_exp0"
@@ -42,7 +44,9 @@ const Prev_exp = ({ prev_exp, age, updateFields}: Props) => {
                 value={prev_exp}
                 onChange = {e => updateFields({prev_exp: e.target.value})}
             />
-            </div>
+            <label htmlFor="prev_exp">NO</label>
+        </div>
+      </div>
         </FormWrapper>
     </div>
   )
