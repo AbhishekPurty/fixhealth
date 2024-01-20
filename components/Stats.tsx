@@ -3,8 +3,7 @@ import { AiOutlineSmile } from "react-icons/ai";
 
 const Stats = () => {
   return (
-    <div>
-      <div className="py-12 my-5 ">
+      <div id="stats" className="py-12 my-5 ">
           <div className="container mx-auto h-full">
             <div className="flex flex-col lg:flex-row gap-y-6 justify-between">
               <div className="flex-1 flex flex-col lg:border-r items-center">
@@ -25,7 +24,6 @@ const Stats = () => {
             </div>
           </div>
         </div>
-    </div>
   )
 }
 
