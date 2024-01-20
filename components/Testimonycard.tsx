@@ -31,9 +31,9 @@ const Testimonycard = ({quote, name, profession, issue, p_image,age }: Props) =>
     //     </div>
     //     </div>
     // </div>
-        <div className="container justify-center pb-12 mx-auto flex flex-col items-center text-white ">
+        <div className="container justify-center mx-auto flex flex-col items-center text-white ">
             <div className="w-[20rem] lg:w-[25rem] h-[27rem] xs:w-auto max-w-sm shadow-md mb-5 sm:mx-auto mt-16 bg-[#04293A] rounded-lg text-gray-900 hover:scale-[1.03] duration-500 ease-in-out">
-            <div className="rounded-t-lg h-32 bg-[#041C32] overflow-hidden">
+            <div className="rounded-t-lg h-20 bg-[#041C32] overflow-hidden">
                 {/* <img className="object-cover object-top w-full" src="./contact.png" alt='cover photo'></img> */}
             </div>
             <div className="mx-auto w-32 h-32 relative -mt-16 border-4 border-white rounded-full overflow-hidden">

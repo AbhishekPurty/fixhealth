@@ -18,11 +18,11 @@ import 'swiper/css/scrollbar';
 
 const Testmonial_v2 = () => {
   return (
-    <div id="testimonials" className="py-10">
+    <div id="testimonials" className="py-32">
       <div className="flex flex-col px-5 mx-10 items-center justify-center text-5xl text-cyan-400 font-semibold">
           What our patients say
       </div>
-      <div className="flex flex-row items-center justify-center">
+      <div className="flex flex-row items-center justify-center mx-10">
         <Swiper
           // install Swiper modules
           modules={[Navigation, Pagination, Scrollbar, A11y]}
