@@ -20,25 +20,27 @@ export default function City(){
           temp.push(item)
         }
       }
-      setData(temp)
-      console.log(temp)
+        setData(temp)
     })
   }, [city])
 
   return (
-    <div className="lg:grid grid-cols-2 lg:px-64">
-      {data ?
-        data.map((doctor:any) => {
-          console.log("Hello")
-          return(
-            <Doctor key={doctor.id} name={doctor.name} years={doctor.years} expertise={doctor.expertise} city={doctor.city} />
-          )
-        })
+    <>
+      {data.length != 0 ?
+        <div className="lg:grid grid-cols-2 lg:px-64">
+          {data.map((doctor:any) => {
+            return(
+              <Doctor key={doctor.id} name={doctor.name} years={doctor.years} expertise={doctor.expertise} city={doctor.city} />
+            )
+          })}
+        </div>
         :
-        <div className="text-white bg-red-600 w-[100rem] h-[100rem]">
-          No doctor found in your location
+        <div className="flex items-center justify-center">
+          <h1 className="bg-[#04293A] rounded-md w-fit mx-10 my-20 py-2 px-2 text-3xl">
+            No doctor found in your location
+          </h1>
         </div>
       }
-    </div>
+  </>
   )
 }

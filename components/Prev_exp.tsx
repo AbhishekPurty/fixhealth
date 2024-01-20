@@ -12,7 +12,6 @@ type Props = PrevData &{
 }
 
 const Prev_exp = ({ prev_exp, age, updateFields}: Props) => {
-  console.log(age)
   return (
     <div>
       <FormWrapper title="Book an appointment">
