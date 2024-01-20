@@ -9,12 +9,12 @@ const Stats = () => {
               <div className="flex-1 flex flex-col lg:border-r items-center">
                 <div className="text-6xl mb-2 text-cyan-400"><IoPeople /></div>
                 <div className="text-2xl xl:text-[40px] font-semibold text-cyan-400 xl:mb-2">+10000</div>
-                <div className="text-lg">Happy Patients</div>
+                <div className="tracking-wide text-lg">Happy Patients</div>
               </div>
               <div className="flex-1 flex flex-col lg:border-r items-center">
                 <div className="text-6xl mb-2 text-cyan-400"><IoCalendar /></div>
                 <div className="text-2xl xl:text-[40px] font-semibold text-cyan-400 xl:mb-2">+1 Lakh</div>
-                <div className="text-lg">Session</div>
+                <div className="tracking-wide text-lg">Session</div>
               </div>
               <div className="flex-1 flex flex-col items-center">
                 <div className="text-6xl mb-2 text-cyan-400"><AiOutlineSmile /></div>
