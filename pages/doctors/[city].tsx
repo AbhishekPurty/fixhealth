@@ -37,7 +37,7 @@ export default function City(){
         :
         <div className="flex items-center justify-center">
           <h1 className="bg-[#04293A] rounded-md w-fit mx-10 my-20 py-2 px-2 text-3xl">
-            No doctor found in your location
+            Sorry! No doctor found in your location!
           </h1>
         </div>
       }

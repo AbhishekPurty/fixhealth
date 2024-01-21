@@ -15,7 +15,7 @@ const Doctor = ({ key, name, years, expertise, city }: Props) => {
   return (
     <div className="flex flex-col mx-auto items-center justify-center gap-10">
       <div className="pb-10 w-[20rem] xs:w-auto max-w-sm shadow-md mb-5 sm:mx-auto mt-16 bg-[#04293A] rounded-lg text-gray-900 hover:scale-[1.03] duration-500 ease-in-out">
-        <div className="rounded-t-lg h-32 bg-[#041C32] overflow-hidden">
+        <div className="rounded-t-lg h-10 bg-[#041C32] overflow-hidden">
             {/* <img className="object-cover object-top w-full" src="./contact.png" alt='cover photo'></img> */}
         </div>
         <div className="mx-auto w-32 h-32 relative -mt-16 border-4 border-white rounded-full overflow-hidden">
