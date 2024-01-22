@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 type Props = {
   key: number
   name: string
@@ -10,6 +11,13 @@ type Props = {
 
 
 const Doctor = ({ key, name, years, expertise, city }: Props) => {
+  
+  const router = useRouter()
+
+  function handleClick(){
+    alert("Booking successful")
+    router.push("/")
+  }
 
     
   return (
@@ -28,6 +36,12 @@ const Doctor = ({ key, name, years, expertise, city }: Props) => {
         </div>
         <div className="w-full block text-white text-center px-4 pt-2">{years} Years of experience</div>
         <div className="w-full block text-white text-center hover:shadow-lg px-4 py-2">{city}</div>
+        <div className="flex items-center justify-center">
+          <button
+            onClick={handleClick}
+            className="text-white border-2 bg-transparent border-cyan-400 hover:bg-cyan-400 duration-300 lg:w-auto lg:mx-0 rounded-full gap-3 px-4 py-2"
+          >Book Consult</button>
+        </div>
       </div>
     </div>
   )

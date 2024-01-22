@@ -5,6 +5,10 @@ import Link from "next/link"
 
 const Navbar = () => {
 
+    function handleClick(){
+        alert("Someone from out team will call you")
+    }
+
     const handleScroll = (e:React.MouseEvent<HTMLAnchorElement,MouseEvent>)=>{
         e.preventDefault();
         const href = e.currentTarget.href;
@@ -30,18 +34,19 @@ const Navbar = () => {
                 <Image src="/logo.png" alt="logo" width={100} height={35}/>
             </Link>
             <ul className="hidden lg:flex gap-7 ">
-                <Link href="#home" onClick={handleScroll} className="flex items-center gap-1 font-medium text-xl text-white hover:text-cyan-400 cursor-pointer duration-300 nav-link">
+                <Link href="/#home" onClick={handleScroll} className="flex items-center gap-1 font-medium text-xl text-white hover:text-cyan-400 cursor-pointer duration-300 nav-link">
                     <li>Home</li>
                 </Link>
-                <Link href="#stats" onClick={handleScroll} className="flex items-center gap-1 font-medium text-xl text-white hover:text-cyan-400 cursor-pointer duration-300 nav-link">
+                <Link href="/#stats" onClick={handleScroll} className="flex items-center gap-1 font-medium text-xl text-white hover:text-cyan-400 cursor-pointer duration-300 nav-link">
                     <li>Stats</li>
                 </Link>
-                <Link href="#testimonials" onClick={handleScroll} className="flex items-center gap-1 font-medium text-xl text-white hover:text-cyan-400 cursor-pointer duration-300 nav-link">
+                <Link href="/#testimonials" onClick={handleScroll} className="flex items-center gap-1 font-medium text-xl text-white hover:text-cyan-400 cursor-pointer duration-300 nav-link">
                     <li>Testimonials</li>
                 </Link>
             </ul>
             <button 
                 // onClick= {() => setShowPopup(true)}
+                onClick={handleClick}
                 className="text-white border-2 bg-transparent border-cyan-400 hover:bg-cyan-400 duration-300 lg:w-auto lg:mx-0 rounded-full gap-3 px-4 py-2"
             >
                 Contact Us
