@@ -6,7 +6,7 @@ import Link from "next/link"
 const Navbar = () => {
 
     function handleClick(){
-        alert("Someone from our team will call you")
+        alert("Someone from our team will call you!")
     }
 
     const handleScroll = (e:React.MouseEvent<HTMLAnchorElement,MouseEvent>)=>{
