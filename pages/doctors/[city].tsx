@@ -27,7 +27,7 @@ export default function City(){
   return (
     <>
       {data.length != 0 ?
-        <div className="lg:grid grid-cols-2 lg:px-64">
+        <div className="lg:grid grid-cols-2 lg:px-36 lgl:px-60">
           {data.map((doctor:any) => {
             return(
               <Doctor key={doctor.id} name={doctor.name} years={doctor.years} expertise={doctor.expertise} city={doctor.city} />

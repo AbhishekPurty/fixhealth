@@ -22,6 +22,7 @@ const config: Config = {
         sm: "640px",
         md: "768px",
         lg: "960px",
+        lgl:"1200px",
         xl: "1330px",
       },
       backgroundImage: {

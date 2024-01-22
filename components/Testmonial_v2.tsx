@@ -26,7 +26,7 @@ const Testmonial_v2 = () => {
         <Swiper
           // install Swiper modules
           modules={[Navigation, Pagination, Scrollbar, A11y]}
-          spaceBetween={0}
+          spaceBetween={10}
           slidesPerView='auto'
           navigation
           pagination={{ clickable: true }}
@@ -34,11 +34,11 @@ const Testmonial_v2 = () => {
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log('slide change')}
           breakpoints = {{
-            680: {
+            760: {
               slidesPerView: 2,
               spaceBetween: 0
             },
-            1000: {
+            1330: {
               slidesPerView: 3,
               spaceBetween: 0
             },
