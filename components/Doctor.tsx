@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 type Props = {
   key: number
+  image : any
   name: string
   years : string
   expertise: string
@@ -10,7 +11,7 @@ type Props = {
 }
 
 
-const Doctor = ({ key, name, years, expertise, city }: Props) => {
+const Doctor = ({ key,image, name, years, expertise, city }: Props) => {
   
   const router = useRouter()
 
@@ -27,7 +28,7 @@ const Doctor = ({ key, name, years, expertise, city }: Props) => {
             {/* <img className="object-cover object-top w-full" src="./contact.png" alt='cover photo'></img> */}
         </div>
         <div className="mx-auto w-32 h-32 relative -mt-16 border-4 border-white rounded-full overflow-hidden">
-              <Image className="object-cover object-center " src={'/placeholder.png'} width={'300'} height={'300'} alt='Woman looking front'></Image>
+              <Image className="object-cover object-center " src={image} width={'300'} height={'300'} alt='Woman looking front'></Image>
         </div>
         <div className="text-center mt-2">
           <div>{key}</div>
