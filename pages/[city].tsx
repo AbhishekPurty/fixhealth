@@ -11,6 +11,8 @@ export default function City(){
     router.push("/")
   }
   const [data, setData ] = useState([])
+  const [isLoad, setIsLoad] = useState(false)
+
   let city:any = router.query.city
   useEffect(()  => {
     axios.get('/api/hello')
@@ -25,12 +27,13 @@ export default function City(){
         }
       }
         setData(temp)
+        setIsLoad(true)
     })
   }, [city])
 
   return (
     <>
-      {data.length != 0 ?
+      {isLoad && data.length != 0 ?
       <div>
         <div className="lg:grid grid-cols-2 lg:px-36 lgl:px-60 mb-20">
           {data.map((doctor:any) => {
@@ -49,6 +52,7 @@ export default function City(){
         </div>
         </div>
         :
+        isLoad ? 
         <div>
         <div className="flex items-center justify-center">
           <h1 className="bg-[#04293A] rounded-md w-fit mx-10 my-20 py-2 px-2 text-3xl">
@@ -63,6 +67,12 @@ export default function City(){
           Home
         </button>
         </div>
+        </div>
+        :
+        <div className="flex items-center justify-center">
+          <h1 className="bg-[#04293A] rounded-md w-fit mx-10 my-20 py-2 px-2 text-3xl">
+            Loading....
+          </h1>
         </div>
       }
   </>
