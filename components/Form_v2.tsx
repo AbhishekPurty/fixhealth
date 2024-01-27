@@ -51,7 +51,7 @@ const Form_v2 = () => {
         // console.log(currentStepIndex)
         // console.log(data.age)
         if(!isLastStep) return next(currentStepIndex, data.age)
-        router.push(`/${data.city}`)
+        router.push(`?city=${data.city}`)
         // alert("Booking Successful")
     }
 

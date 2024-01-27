@@ -3,18 +3,26 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import Doctor from "@/components/Doctor"
 
-export default function City(){
+type Props = {
+  city: string
+}
 
+export default function City({city} : Props){
+
+  
   const router = useRouter();
-
+  if(city===""){
+    router.push("/")
+  }
   function handleHome(){
     router.push("/")
   }
   const [data, setData ] = useState([])
   const [isLoad, setIsLoad] = useState(false)
-
-  let city:any = router.query.city
+  
   useEffect(()  => {
+
+
     axios.get('/api/hello')
     .then((res) => {
       let temp:any = []
@@ -26,8 +34,13 @@ export default function City(){
           temp.push(item)
         }
       }
-        setData(temp)
-        setIsLoad(true)
+      setData(temp)
+
+      setTimeout(() => {
+        
+      }, 1000);
+
+      setIsLoad(true)
     })
   }, [city])
 
@@ -52,11 +65,16 @@ export default function City(){
         </div>
         </div>
         :
-        isLoad ? 
         <div>
         <div className="flex items-center justify-center">
           <h1 className="bg-[#04293A] rounded-md w-fit mx-10 my-20 py-2 px-2 text-3xl">
-            Sorry! No doctor found in your location!
+            {
+              !isLoad
+              ?
+              <div>Loading...</div>
+              :
+              <div>Sorry! No doctor found in your location!</div>
+            }
           </h1>
         </div>
         <div className="flex items-center justify-center mb-10">
@@ -68,12 +86,7 @@ export default function City(){
         </button>
         </div>
         </div>
-        :
-        <div className="flex items-center justify-center">
-          <h1 className="bg-[#04293A] rounded-md w-fit mx-10 my-20 py-2 px-2 text-3xl">
-            Loading....
-          </h1>
-        </div>
+        
       }
   </>
   )
